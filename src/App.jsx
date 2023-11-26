@@ -13,7 +13,9 @@ const App = () => {
     const data = await response.json();
     setMovies(data.Search); // You can do something with the data here
   };
-  useEffect(() => {}, []);
+  useEffect(() => {
+    searchMovies("Peter");
+  }, []);
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       searchMovies(searchTerm);
